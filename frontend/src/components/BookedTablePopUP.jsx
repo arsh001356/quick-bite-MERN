@@ -11,7 +11,7 @@ const BookedTablePage = () => {
     useEffect(() => {
         const fetchBookingDetails = async () => {
             try {
-                const response = await axios.get(`http://localhost:5000/booking/${id}`);
+                const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/booking/${id}`);
                 setBookingDetails(response.data);
             } catch (err) {
 

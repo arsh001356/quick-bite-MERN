@@ -26,7 +26,7 @@ const BookTable = () => {
 
 
         try {
-            const response = await axios.post(`http://localhost:5000/booktable`, formData);
+            const response = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/booktable`, formData);
             toast.success(response.data.message);
             //  console.log("Booking successful:", response.data.bookingId);
             navigate(`/booking/${response.data.bookingId}`)
