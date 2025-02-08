@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
 import Menu from './Menu';
 
 
@@ -44,12 +43,12 @@ function Home() {
                             <h1 className="text-4xl ">20% off</h1>
                         </div>
                         <div>
-                            <button
-                                className="  bg-yellow-500 my-2 rounded-2xl px-4 py-1  flex justify-center items-center hover:bg-orange-600 cursor-pointer ">
+                            <a href="/bookTable"
+                                className="  bg-yellow-500 my-2 rounded-2xl px-2 py-1  flex justify-center items-center hover:bg-orange-600 cursor-pointer ">
                                 Book
                                 Table
                                 <i className="fa-solid fa-cart-shopping mx-1"></i>
-                            </button>
+                            </a>
                         </div>
 
                     </div>
@@ -65,12 +64,12 @@ function Home() {
                         <div>
                             <h1 className="text-4xl ">15% off</h1>
                         </div>
-                        <button
-                            className="  bg-yellow-500 my-2 rounded-2xl px-4 py-1  flex justify-center items-center hover:bg-orange-600 cursor-pointer ">
+                        <a href="/bookTable"
+                            className="  bg-yellow-500 my-2 rounded-2xl px-2 py-1  flex justify-center items-center hover:bg-orange-600 cursor-pointer ">
                             Book
                             Table
                             <i className="fa-solid fa-cart-shopping mx-1"></i>
-                        </button>
+                        </a>
                     </div>
 
 

@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+
 const Schema = mongoose.Schema;
 
 const bookTableSchema = Schema({
@@ -23,7 +24,8 @@ const bookTableSchema = Schema({
     guests: {
         type: Number,
         required: true,
-    }
+    },
+
 
 })
 const BookTable = mongoose.model("BookTable", bookTableSchema)

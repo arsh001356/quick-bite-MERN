@@ -24,7 +24,7 @@ export const tableBooking = async (req, res) => {
 
         await newBooking.save();
 
-        console.log("New booking created:", newBooking);
+        //  console.log("New booking created:", newBooking);
         res.status(200).json({ message: "Booking successful", bookingId: newBooking._id });
     } catch (error) {
         console.error("Error while booking:", error.message);

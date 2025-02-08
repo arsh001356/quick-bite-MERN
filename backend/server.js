@@ -23,7 +23,7 @@ async function main() {
 }
 
 app.get('/', (req, res) => {
-    res.send('Hello World');
+    res.send('api working');
 });
 app.use("/user", userRoute)
 app.use(BookTableRoute)

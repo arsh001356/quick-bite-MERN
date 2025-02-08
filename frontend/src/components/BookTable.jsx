@@ -28,7 +28,7 @@ const BookTable = () => {
         try {
             const response = await axios.post(`http://localhost:5000/booktable`, formData);
             toast.success(response.data.message);
-            console.log("Booking successful:", response.data.bookingId);
+            //  console.log("Booking successful:", response.data.bookingId);
             navigate(`/booking/${response.data.bookingId}`)
 
 
@@ -107,7 +107,7 @@ const BookTable = () => {
                         </label>
                         <input
                             type="time"
-                            id="date"
+                            id="time"
                             ref={timeRef}
                             className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                             placeholder="you@example.com"
@@ -139,7 +139,7 @@ const BookTable = () => {
                         </label>
                         <input
                             type="number"
-                            id="password"
+                            id="guests"
                             ref={guestsRef}
                             className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                             placeholder="Number Of Guests"

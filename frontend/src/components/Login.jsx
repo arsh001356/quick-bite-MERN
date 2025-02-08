@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useContext, useRef } from "react";
 import axios from "axios"
 import toast from 'react-hot-toast';
 import { useNavigate } from "react-router-dom";
@@ -8,6 +8,7 @@ const Login = () => {
     const emailRef = useRef(null);
     const passwordRef = useRef(null);
     const navigate = useNavigate()
+    //const{authUser,setAuthUser}=useContext(AuthContext)
 
 
     const handleLogin = async (e) => {
@@ -19,13 +20,15 @@ const Login = () => {
 
         await axios.post("http://localhost:5000/user/login", formData)
             .then((res) => {
-                console.log(res.data)
+                // console.log(res.data)
                 if (res.data) {
                     toast.success("Login Successfully")
                 }
                 localStorage.setItem("User", JSON.stringify(res.data.user))
-                console.log(res.data.user)
+                // console.log(res.data.user)
                 navigate("/")
+                window.location.reload()
+
             })
             .catch((err) => {
                 if (err) {

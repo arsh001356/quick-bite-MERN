@@ -34,8 +34,14 @@ export const signUp = async (req, res) => {
 export const signIn = async (req, res) => {
     const { email, password } = req.body;
     const user = await User.findOne({ email })
+    if (!user) {
+        return res.status(400).json({
+            msg: "invalid email or password"
+        })
+    }
     const isMatch = await bcryptjs.compare(password, user.password)
-    if (!isMatch || !user) {
+
+    if (!isMatch) {
         return res.status(400).json({
             msg: "invalid email or password"
         })

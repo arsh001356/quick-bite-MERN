@@ -20,7 +20,7 @@ const Signup = () => {
         // console.log("Form submitted:", formData);
         await axios.post("http://localhost:5000/user/signup", formData)
             .then((res) => {
-                console.log(res.data)
+                // console.log(res.data)
                 if (res.data) {
                     toast.success("SignUp Successfully")
                 }
