@@ -117,7 +117,7 @@ function Menu() {
                                 <p>{food.description}</p>
                                 <div className="font-semibold text-lg flex justify-between items-center mt-8">
                                     <p>{food.price}</p>
-                                    <a href="/bookTable" className="w-10 h-10 bg-yellow-500 rounded-full self-end hover:bg-orange-500 flex justify-center items-center">
+                                    <a href="/booktable" className="w-10 h-10 bg-yellow-500 rounded-full self-end hover:bg-orange-500 flex justify-center items-center">
                                         <FaShoppingCart />
                                     </a>
                                 </div>

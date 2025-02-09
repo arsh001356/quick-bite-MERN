@@ -25,7 +25,7 @@ function Navbar() {
                         <li className=" cursor-pointer  "><Link to="/">HOME</Link></li>
                         <li className=" cursor-pointer "><Link to="/menu">MENU</Link></li>
                         <li className=" cursor-pointer "><Link to="/about">ABOUT</Link></li>
-                        <li className=" cursor-pointer "><a href="/bookTable">BOOK TABLE</a></li>
+                        <li className=" cursor-pointer "><a href="/booktable">BOOK TABLE</a></li>
 
                     </ul>
 
@@ -34,7 +34,7 @@ function Navbar() {
                     authUser ? (<Logout />) :
                         (<div
                             className="p-4 mx-10 font-semibold bg-orange-400 rounded-2xl w-28 h-8 flex justify-center items-center hover:bg-orange-600 cursor-pointer">
-                            <a href="/signUp"> SIGN UP</a>
+                            <a href="/signup"> SIGN UP</a>
                         </div>)
                 }
 

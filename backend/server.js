@@ -11,16 +11,29 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT || 3000;
 const mongoDbUri = process.env.MONGO_DB_URI;
-const frontendUrl = process.env.FRONTEND_URL;
 
-app.use(express.json());
+
+const Development_frontend = process.env.DEV_FRONTEND_URL;
+const Deployed_frontend = process.env.DEPLOYED_FRONTEND_URL;
+
+
+const allowedOrigins = [Development_frontend, Deployed_frontend];
 
 app.use(
     cors({
-        origin: frontendUrl,
+        origin: function (origin, callback) {
+            if (!origin || allowedOrigins.includes(origin)) {
+                callback(null, true);
+            } else {
+                callback(new Error("CORS policy violation"));
+            }
+        },
         credentials: true,
     })
 );
+
+app.use(express.json());
+
 
 async function main() {
     await mongoose.connect(mongoDbUri);

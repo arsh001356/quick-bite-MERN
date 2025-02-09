@@ -43,7 +43,7 @@ function Home() {
                             <h1 className="text-4xl ">20% off</h1>
                         </div>
                         <div>
-                            <a href="/bookTable"
+                            <a href="/booktable"
                                 className="  bg-yellow-500 my-2 rounded-2xl px-2 py-1  flex justify-center items-center hover:bg-orange-600 cursor-pointer ">
                                 Book
                                 Table
@@ -64,7 +64,7 @@ function Home() {
                         <div>
                             <h1 className="text-4xl ">15% off</h1>
                         </div>
-                        <a href="/bookTable"
+                        <a href="/booktable"
                             className="  bg-yellow-500 my-2 rounded-2xl px-2 py-1  flex justify-center items-center hover:bg-orange-600 cursor-pointer ">
                             Book
                             Table
