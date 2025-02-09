@@ -1,7 +1,8 @@
-import React, { useContext, useRef } from "react";
+import React, { useRef } from "react";
 import axios from "axios"
 import toast from 'react-hot-toast';
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom"
 
 
 const Login = () => {
@@ -86,12 +87,12 @@ const Login = () => {
                 </form>
                 <p className="text-sm text-white text-center mt-4">
                     Don't have an account?{" "}
-                    <a
-                        href="/signup"
+                    <Link
+                        to="/signup"
                         className="text-gray-800 hover:underline"
                     >
                         Sign up
-                    </a>
+                    </Link>
                 </p>
             </div>
         </div>

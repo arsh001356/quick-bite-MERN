@@ -1,5 +1,6 @@
 import React from 'react'
 import Menu from './Menu';
+import { Link } from "react-router-dom"
 
 
 function Home() {
@@ -43,12 +44,12 @@ function Home() {
                             <h1 className="text-4xl ">20% off</h1>
                         </div>
                         <div>
-                            <a href="/booktable"
+                            <Link to="/booktable"
                                 className="  bg-yellow-500 my-2 rounded-2xl px-2 py-1  flex justify-center items-center hover:bg-orange-600 cursor-pointer ">
                                 Book
                                 Table
                                 <i className="fa-solid fa-cart-shopping mx-1"></i>
-                            </a>
+                            </Link>
                         </div>
 
                     </div>
@@ -64,12 +65,12 @@ function Home() {
                         <div>
                             <h1 className="text-4xl ">15% off</h1>
                         </div>
-                        <a href="/booktable"
+                        <Link to="/booktable"
                             className="  bg-yellow-500 my-2 rounded-2xl px-2 py-1  flex justify-center items-center hover:bg-orange-600 cursor-pointer ">
                             Book
                             Table
                             <i className="fa-solid fa-cart-shopping mx-1"></i>
-                        </a>
+                        </Link>
                     </div>
 
 

@@ -1,7 +1,8 @@
 import React, { useRef } from "react";
 import axios from "axios"
 import toast from 'react-hot-toast';
-import { useNavigate } from "react-router-dom";
+
+import { useNavigate, Link } from "react-router-dom";
 
 const Signup = () => {
     const nameRef = useRef(null);
@@ -100,12 +101,12 @@ const Signup = () => {
                 </form>
                 <div className="text-sm text-white text-center mt-4">
                     Already have an account?{" "}
-                    <a
-                        href="/login"
+                    <Link
+                        to="/login"
                         className="text-gray-800 hover:underline"
                     >
                         Log in
-                    </a>
+                    </Link>
                 </div>
             </div>
         </div>
